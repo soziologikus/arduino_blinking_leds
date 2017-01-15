@@ -1,9 +1,6 @@
-int i = 300;
+int i = 200;
 
-
-
-
-void setup() {            // initialize digital pin LED_BUILTIN as an output.
+void setup() {    
   pinMode(2, OUTPUT);
   pinMode(3, OUTPUT);
   pinMode(4, OUTPUT);
@@ -11,14 +8,14 @@ void setup() {            // initialize digital pin LED_BUILTIN as an output.
   pinMode(6, OUTPUT);
 }
 
+
 void loop() {
 
 kitt();
+
 alle_blinken();
 
-for (int y=1; y<3; y++){
-anna();
-}
+for (int y=1; y<5; y++){anna();}
 
 alle_blinken();
 
@@ -26,8 +23,6 @@ alle_blinken();
 
 
 void anna() {
-
-int phase = 1;
 
 for (int g = 1; g < 5; g++){
   
@@ -65,28 +60,20 @@ for(int c=1; c < 18; c++){
 
   digitalWrite(ledNr, HIGH);
 
-  delay(i);                       // wait for i millisecons
-
-if (ledNr == 6) { durchgang = 2;}
-
-
- if (durchgang == 1) {
-
-    if (ledNr < 6) {
-      ledNr = ledNr + 1;
-    } 
- }
+  delay(i);                       
+  
+  if (ledNr == 6) {durchgang = 2;}
 
 
-
-if (durchgang == 2) {
-
-    if (ledNr > 1) {
-      ledNr = ledNr - 1;
-    }
+  if (durchgang == 1) {
+    if (ledNr < 6) {ledNr = ledNr + 1;} 
   }
 
-if (ledNr == 2) { durchgang = 1; }
+  if (durchgang == 2) {
+    if (ledNr > 1) {ledNr = ledNr - 1;}
+  }
+
+  if (ledNr == 2) { durchgang = 1;}
 
 }
 
@@ -117,7 +104,3 @@ for(int x=1; x<4; x++){
 }
 
 }
-  
-
-
-
