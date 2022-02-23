@@ -1,5 +1,5 @@
 # arduino_blinking_leds
-This is my first Arduino project.
+This was my first Arduino project.
 
 5 Leds connected to digital pins. E.g., they blink like KITT did in the 1980s.
 
